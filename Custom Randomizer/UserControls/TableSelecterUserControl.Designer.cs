@@ -1,4 +1,4 @@
-﻿namespace Custom_Randomizer.UserControls;
+﻿namespace CustomRandomizer.UserControls;
 
 partial class TableSelecterUserControl
 {

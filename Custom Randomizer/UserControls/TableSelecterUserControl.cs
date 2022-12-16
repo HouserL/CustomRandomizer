@@ -1,7 +1,7 @@
 ﻿using CustomRandomizer.Logic;
 using CustomRandomizer.Forms;
 
-namespace Custom_Randomizer.UserControls;
+namespace CustomRandomizer.UserControls;
 
 public partial class TableSelecterUserControl : UserControl
 {
@@ -16,11 +16,18 @@ public partial class TableSelecterUserControl : UserControl
     {
         TableNamesComboBox.Items.Clear();
         TableNamesComboBox.Items.AddRange(RandomizerForm.Tables.ToArray());
+        TableNamesComboBox.SelectedIndex = 0;
     }
 
     private void RerollButton_Click(object sender, EventArgs e)
     {
         _usedResults.Add(ResultsLabel.Text);
+        string output;
+        do
+        {
+            output = RandomizeResults(TableNamesComboBox.SelectedItem.ToString());
+        } while (!_usedResults.Contains(output));
+        ResultsLabel.Text = output;
     }
 
     private void RemoveControlButton_Click(object sender, EventArgs e)
@@ -28,8 +35,8 @@ public partial class TableSelecterUserControl : UserControl
         throw new NotImplementedException();
     }
 
-    private void RandomizeResults(string tableName)
+    private string RandomizeResults(string tableName)
     {
-        RandomizerLogic.RunTable(tableName, RandomizerForm.Tables);
+        return RandomizerLogic.RunTable(RandomizerForm.Tables, tableName);
     }
 }

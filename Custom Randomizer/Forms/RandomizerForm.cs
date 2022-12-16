@@ -13,7 +13,7 @@ public partial class RandomizerForm : Form
 
     private void LoadTables()
     {
-        
+
     }
 
     private void AddTableSelector_Click(object sender, EventArgs e)

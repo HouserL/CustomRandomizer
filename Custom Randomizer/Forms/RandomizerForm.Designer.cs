@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableSelecterUserControl1 = new Custom_Randomizer.UserControls.TableSelecterUserControl();
+            this.tableSelecterUserControl1 = new CustomRandomizer.UserControls.TableSelecterUserControl();
             this.AddTableSelector = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
