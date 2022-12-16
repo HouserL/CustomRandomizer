@@ -1,6 +1,11 @@
-﻿namespace Custom_Randomizer.Logic;
+﻿using CustomRandomizer.Models;
 
-public class RandomizerLogic
+namespace CustomRandomizer.Logic;
+
+public static class RandomizerLogic
 {
-
+    internal static void RunTable(string tableName, List<TableModel> tables)
+    {
+        throw new NotImplementedException();
+    }
 }

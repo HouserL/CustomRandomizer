@@ -1,5 +1,6 @@
 ﻿namespace CustomRandomizer.Models;
 
-public class TableItemModel
+public class TableModel
 {
+
 }
