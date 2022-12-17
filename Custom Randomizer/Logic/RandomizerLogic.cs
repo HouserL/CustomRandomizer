@@ -1,8 +1,4 @@
-﻿using CustomRandomizer.Models;
-using System.Linq;
-
-namespace CustomRandomizer.Logic;
-
+﻿namespace CustomRandomizer.Logic;
 public static class RandomizerLogic
 {
     public static string RunTable(List<TableModel> tableList, TableModel table)
@@ -29,12 +25,16 @@ public static class RandomizerLogic
         }
         return output;
     }
-    internal static TableModel ReturnSingle(List<TableModel> tables, string tableName)
+    public static string RerunTable(List<TableModel> tables, TableModel table, List<string> usedResults)
     {
-        return tables.ToList().Where(x => x.Name.ToLower().Contains(tableName.ToLower())).FirstOrDefault();
-    }
-    internal static string ReturnSingleString(List<TableModel> tables, string tableName)
-    {
-        return tables.ToList().Where(x => x.Name.ToLower().Contains(tableName.ToLower())).FirstOrDefault().Name;
+        string output;
+        do
+        {
+            output = RandomizerLogic.RunTable(tables, table);
+            if (usedResults.Count == table.TableItems.Count) usedResults.Clear();
+        } while (usedResults.Contains(output));
+
+        usedResults.Add(output);
+        return output;//RandomizerLogic.RunTable(_tables, table);
     }
 }

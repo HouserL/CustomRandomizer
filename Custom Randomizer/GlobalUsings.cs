@@ -1,5 +1,10 @@
 ﻿global using global::System;
-global using global::System.Windows.Forms;
-global using global::CustomRandomizer.UserControls;
 global using global::System.Collections.Generic;
+global using global::System.Data;
 global using global::System.IO;
+global using global::System.Linq;
+global using global::System.Windows.Forms;
+global using global::CustomRandomizer.Forms;
+global using global::CustomRandomizer.Logic;
+global using global::CustomRandomizer.Models;
+global using global::CustomRandomizer.UserControls;

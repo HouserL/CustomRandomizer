@@ -1,11 +1,4 @@
-﻿using CustomRandomizer.Forms;
-using CustomRandomizer.Logic;
-using CustomRandomizer.Models;
-using System.Data;
-using System.Linq;
-
-namespace CustomRandomizer.UserControls;
-
+﻿namespace CustomRandomizer.UserControls;
 public partial class TableSelecterControl : UserControl
 {
     private List<string> _usedResults = new();
@@ -16,19 +9,16 @@ public partial class TableSelecterControl : UserControl
         _tables = RandomizerForm.Tables;
         LoadComboBox();
     }
-
     private void LoadComboBox()
     {
         TableNamesComboBox.Items.Clear();
         TableNamesComboBox.Items.AddRange(_tables.Select(x => x.Name).ToArray());
         TableNamesComboBox.SelectedIndex = 0;
     }
-
     public void RerollButton_Click(object sender, EventArgs e)
     {
-        ResultsLabel.Text = Test(_tables.Where(x => x.Name == TableNamesComboBox.Text).FirstOrDefault());
+        ResultsLabel.Text = RandomizerLogic.RerunTable(_tables, _tables.FirstOrDefault(x => x.Name == TableNamesComboBox.Text), _usedResults);
     }
-
     public void RemoveControlButton_Click(object sender, EventArgs e)
     {
         throw new NotImplementedException();
@@ -37,21 +27,8 @@ public partial class TableSelecterControl : UserControl
     {
         ResetSelection();
     }
-
     public void ResetSelection()
     {
         _usedResults.Clear();
-    }
-    private string Test(TableModel table)
-    {
-        string output;
-        do
-        {
-            output = RandomizerLogic.RunTable(_tables, table);
-            if(_usedResults.Count == table.TableItems.Count) _usedResults.Clear();
-        } while (_usedResults.Contains(output));
-       
-        _usedResults.Add(output);
-        return output;//RandomizerLogic.RunTable(_tables, table);
     }
 }
