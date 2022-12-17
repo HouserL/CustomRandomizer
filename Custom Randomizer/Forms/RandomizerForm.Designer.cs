@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableSelecterUserControl1 = new CustomRandomizer.UserControls.TableSelecterUserControl();
             this.AddTableSelector = new System.Windows.Forms.Button();
+            this.RerollAllFields = new System.Windows.Forms.Button();
+            this.TableConfigurer = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // tableSelecterUserControl1
-            // 
-            this.tableSelecterUserControl1.BackColor = System.Drawing.Color.Transparent;
-            this.tableSelecterUserControl1.Location = new System.Drawing.Point(7, 94);
-            this.tableSelecterUserControl1.Name = "tableSelecterUserControl1";
-            this.tableSelecterUserControl1.Size = new System.Drawing.Size(516, 70);
-            this.tableSelecterUserControl1.TabIndex = 0;
             // 
             // AddTableSelector
             // 
@@ -50,13 +43,33 @@
             this.AddTableSelector.UseVisualStyleBackColor = true;
             this.AddTableSelector.Click += new System.EventHandler(this.AddTableSelector_Click);
             // 
+            // RerollAllFields
+            // 
+            this.RerollAllFields.Location = new System.Drawing.Point(105, 12);
+            this.RerollAllFields.Name = "RerollAllFields";
+            this.RerollAllFields.Size = new System.Drawing.Size(75, 57);
+            this.RerollAllFields.TabIndex = 2;
+            this.RerollAllFields.Text = "Reroll All Fields";
+            this.RerollAllFields.UseVisualStyleBackColor = true;
+            this.RerollAllFields.Click += new System.EventHandler(this.RerollAllFields_Click);
+            // 
+            // TableConfigurer
+            // 
+            this.TableConfigurer.Location = new System.Drawing.Point(449, 12);
+            this.TableConfigurer.Name = "TableConfigurer";
+            this.TableConfigurer.Size = new System.Drawing.Size(75, 57);
+            this.TableConfigurer.TabIndex = 3;
+            this.TableConfigurer.Text = "Table Configurer Button";
+            this.TableConfigurer.UseVisualStyleBackColor = true;
+            // 
             // RandomizerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 478);
+            this.ClientSize = new System.Drawing.Size(531, 478);
+            this.Controls.Add(this.TableConfigurer);
+            this.Controls.Add(this.RerollAllFields);
             this.Controls.Add(this.AddTableSelector);
-            this.Controls.Add(this.tableSelecterUserControl1);
             this.Name = "RandomizerForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -65,7 +78,9 @@
 
         #endregion
 
-        private TableSelecterUserControl tableSelecterUserControl1;
         private Button AddTableSelector;
+        private TableSelecterControl tableSelecterControl1;
+        private Button RerollAllFields;
+        private Button TableConfigurer;
     }
 }
