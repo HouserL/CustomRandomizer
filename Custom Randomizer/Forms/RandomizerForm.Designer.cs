@@ -31,6 +31,8 @@
             this.AddTableSelector = new System.Windows.Forms.Button();
             this.RerollAllFields = new System.Windows.Forms.Button();
             this.TableConfigurer = new System.Windows.Forms.Button();
+            this.SaveLoadoutButton = new System.Windows.Forms.Button();
+            this.LoadoutComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // AddTableSelector
@@ -45,7 +47,7 @@
             // 
             // RerollAllFields
             // 
-            this.RerollAllFields.Location = new System.Drawing.Point(105, 12);
+            this.RerollAllFields.Location = new System.Drawing.Point(93, 12);
             this.RerollAllFields.Name = "RerollAllFields";
             this.RerollAllFields.Size = new System.Drawing.Size(75, 57);
             this.RerollAllFields.TabIndex = 2;
@@ -62,11 +64,31 @@
             this.TableConfigurer.Text = "Table Configurer Button";
             this.TableConfigurer.UseVisualStyleBackColor = true;
             // 
+            // SaveLoadoutButton
+            // 
+            this.SaveLoadoutButton.Location = new System.Drawing.Point(174, 12);
+            this.SaveLoadoutButton.Name = "SaveLoadoutButton";
+            this.SaveLoadoutButton.Size = new System.Drawing.Size(75, 57);
+            this.SaveLoadoutButton.TabIndex = 4;
+            this.SaveLoadoutButton.Text = "Save Loadout Button";
+            this.SaveLoadoutButton.UseVisualStyleBackColor = true;
+            this.SaveLoadoutButton.Click += new System.EventHandler(this.SaveLoadoutButton_Click);
+            // 
+            // LoadoutComboBox
+            // 
+            this.LoadoutComboBox.FormattingEnabled = true;
+            this.LoadoutComboBox.Location = new System.Drawing.Point(255, 12);
+            this.LoadoutComboBox.Name = "LoadoutComboBox";
+            this.LoadoutComboBox.Size = new System.Drawing.Size(188, 23);
+            this.LoadoutComboBox.TabIndex = 5;
+            // 
             // RandomizerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 497);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(548, 93);
+            this.Controls.Add(this.LoadoutComboBox);
+            this.Controls.Add(this.SaveLoadoutButton);
             this.Controls.Add(this.TableConfigurer);
             this.Controls.Add(this.RerollAllFields);
             this.Controls.Add(this.AddTableSelector);
@@ -82,5 +104,7 @@
         private TableSelecterControl tableSelecterControl1;
         private Button RerollAllFields;
         private Button TableConfigurer;
+        private Button SaveLoadoutButton;
+        private ComboBox LoadoutComboBox;
     }
 }

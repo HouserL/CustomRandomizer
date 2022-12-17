@@ -7,6 +7,7 @@ namespace CustomRandomizer.Forms;
 public partial class RandomizerForm : Form
 {
     public static List<TableModel> Tables = new();
+    public List<LoadOutModel> LoadOuts = new();
     public RandomizerForm()
     {
         LoadTables();
@@ -22,14 +23,7 @@ public partial class RandomizerForm : Form
     {
         TableSelecterControl tableSelecter = new();
         int count = this.Controls.OfType<TableSelecterControl>().ToList().Count;
-        //if (count % 2 != 0)
-        //{
-        //    tableSelecter.Location = new System.Drawing.Point(535, (70 * (count / 2)) + 70);// Change x to 535 figure out how to run 2 rows. change count to be count / 2
-        //}
-        //else
-        //{
-        //    tableSelecter.Location = new System.Drawing.Point(10, (70 * (count / 2)) + 70);
-        //}
+     
         switch (count % 3)
         {
             case 0: tableSelecter.Location = new System.Drawing.Point(11, (75 * (count / 3)) + 75); break;
@@ -77,5 +71,17 @@ public partial class RandomizerForm : Form
             selecter.ResetSelection();
             selecter.RerollButton_Click(this, EventArgs.Empty);
         }
+    }
+
+    private void SaveLoadoutButton_Click(object sender, EventArgs e)
+    {
+        LoadOutModel loadOutModel= new LoadOutModel();
+        foreach (TableSelecterControl selecter in Controls.OfType<TableSelecterControl>())
+        {
+            loadOutModel.Tables.Add(selecter.TableNamesComboBox.Items[selecter.TableNamesComboBox.SelectedIndex].ToString());
+        }
+        loadOutModel.Name = "Test1";
+
+
     }
 }

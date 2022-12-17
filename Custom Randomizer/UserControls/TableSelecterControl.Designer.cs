@@ -77,8 +77,7 @@
             // 
             // TableSelecterControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.ResultsLabel);
             this.Controls.Add(this.RemoveControlButton);
@@ -96,6 +95,6 @@
         private Label ResultsLabel;
         public Button RemoveControlButton;
         private Button RerollButton;
-        private ComboBox TableNamesComboBox;
+        public ComboBox TableNamesComboBox;
     }
 }
