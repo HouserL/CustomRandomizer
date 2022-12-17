@@ -66,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 478);
+            this.ClientSize = new System.Drawing.Size(1036, 497);
             this.Controls.Add(this.TableConfigurer);
             this.Controls.Add(this.RerollAllFields);
             this.Controls.Add(this.AddTableSelector);

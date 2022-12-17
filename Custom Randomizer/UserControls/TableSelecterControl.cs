@@ -1,15 +1,8 @@
 ﻿using CustomRandomizer.Forms;
 using CustomRandomizer.Logic;
 using CustomRandomizer.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace CustomRandomizer.UserControls;
 
@@ -20,7 +13,6 @@ public partial class TableSelecterControl : UserControl
     public TableSelecterControl()
     {
         InitializeComponent();
-        //if (!this.DesignMode) return; //Delete this before running code.
         _tables = RandomizerForm.Tables;
         LoadComboBox();
     }

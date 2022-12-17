@@ -24,12 +24,18 @@ public partial class RandomizerForm : Form
         int count = this.Controls.OfType<TableSelecterControl>().ToList().Count;
         //if (count % 2 != 0)
         //{
-            tableSelecter.Location = new System.Drawing.Point(10, (70 * (count)) + 70);// Change x to 535 figure out how to run 2 rows. change count to be count / 2
+        //    tableSelecter.Location = new System.Drawing.Point(535, (70 * (count / 2)) + 70);// Change x to 535 figure out how to run 2 rows. change count to be count / 2
         //}
         //else
         //{
         //    tableSelecter.Location = new System.Drawing.Point(10, (70 * (count / 2)) + 70);
         //}
+        switch (count % 3)
+        {
+            case 0: tableSelecter.Location = new System.Drawing.Point(11, (75 * (count / 3)) + 75); break;
+            case 1: tableSelecter.Location = new System.Drawing.Point(530, (75 * (count / 3)) + 75); break;
+            case 2: tableSelecter.Location = new System.Drawing.Point(1049, (75 * (count / 3)) + 75); break;
+        }
         tableSelecter.Name = "tableSelecter_" + (count + 1);
         tableSelecter.RemoveControlButton.Click += new EventHandler(btnDelete_Click);
         this.Controls.Add(tableSelecter);
@@ -38,33 +44,29 @@ public partial class RandomizerForm : Form
     {
         //Reference the Button which was clicked.
         Button button = (sender as Button);
-
         //Determine the Index of the Control.
         int index = int.Parse(button.Parent.Name.Split('_')[1]);
-        bool side = (index % 2 == 0);
         //Find the Selecter using Index and remove it.
         Controls.Remove(Controls.Find("tableSelecter_" + index, true)[0]);
-
         //Rearranging the Location controls.
         foreach (TableSelecterControl selecter in Controls.OfType<TableSelecterControl>())
         {
             int controlIndex = int.Parse(selecter.Name.Split('_')[1]);
-            bool check = (controlIndex % 2 == 0);
             if (controlIndex > index)
             {
-                selecter.Top = selecter.Top - 70;
                 selecter.Name = "tableSelecter_" + (controlIndex - 1);
+                switch (controlIndex % 3)
+                {
+                    case 0:
+                        selecter.Left += -519; break;
+                    case 1:
+                        selecter.Top += -75;
+                        selecter.Left += 1038; break;
+                    case 2:
+                        selecter.Left += -519; break;
+                }
             }
-            //else if (controlIndex > index && side == true)
-            //{
-            //    selecter.Left += -525;
-            //    selecter.Name = "tableSelecter_" + (controlIndex - 1);
-            //}
-            //else if (controlIndex > index && side == false)
-            //{
-            //    selecter.Left += 525;
-            //    selecter.Name = "tableSelecter_" + (controlIndex - 1);
-            //}
+            selecter.Name = "tableSelecter_" + (controlIndex - 1);
         }
     }
 
