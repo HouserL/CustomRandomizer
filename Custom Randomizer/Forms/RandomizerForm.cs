@@ -7,16 +7,39 @@ public partial class RandomizerForm : Form
     {
         LoadTables();
         InitializeComponent();
+        LoadLoadOuts();
     }
     private void LoadTables()
     {
         Tables = JsonConverter.ReadJsonFile<List<TableModel>>($@".\Tables.json");
     }
+    private void LoadLoadOuts()
+    {
+        LoadOuts = JsonConverter.ReadJsonFile<List<LoadOutModel>>($@".\LoadOuts.json");
+        LoadLoadOutComboBox();
+    }
+    private void SaveLoadOuts()
+    {
+        JsonConverter.WriteToFile<List<LoadOutModel>>(LoadOuts, $@".\LoadOuts.json");
+        LoadLoadOutComboBox();
+    }
+    private void LoadLoadOutComboBox()
+    {
+        LoadoutComboBox.Items.Clear();
+        LoadoutComboBox.Items.AddRange(LoadOuts.Select(x => x.Name).ToArray());
+        LoadoutComboBox.SelectedIndex = 0;
+    }
+
     private void AddTableSelector_Click(object sender, EventArgs e)
+    {
+        CreateTableSelector(string.Empty);
+    }
+
+    private void CreateTableSelector(string tableName)
     {
         TableSelecterControl tableSelecter = new();
         int count = this.Controls.OfType<TableSelecterControl>().ToList().Count; // Determine how many controls of this type there are.
-     
+
         switch (count % 3) // Place the Control in  a column based on how many controls there are.
         {
             case 0: tableSelecter.Location = new System.Drawing.Point(11, (75 * (count / 3)) + 75); break;
@@ -26,8 +49,10 @@ public partial class RandomizerForm : Form
         tableSelecter.Name = "tableSelecter_" + (count + 1);
         tableSelecter.RemoveControlButton.Click += new EventHandler(btnDelete_Click);
         this.Controls.Add(tableSelecter);
+        if (tableName != string.Empty) tableSelecter.TableNamesComboBox.Text = tableName;
     }
-    private void btnDelete_Click(object sender, EventArgs e)
+
+    public void btnDelete_Click(object sender, EventArgs e)
     {
         Button button = (sender as Button);     //Reference the Button which was clicked.
         
@@ -40,7 +65,7 @@ public partial class RandomizerForm : Form
             int controlIndex = int.Parse(selecter.Name.Split('_')[1]);
             if (controlIndex > index)
             {
-                selecter.Name = "tableSelecter_" + (controlIndex - 1);
+                selecter.Name = "tableSelecter_" + (controlIndex - 1); // Rename control for future actions.
                 switch (controlIndex % 3) // Check which Column the Control is in.
                 {
                     case 0: selecter.Left += -519; break;                       // Right Column
@@ -48,7 +73,6 @@ public partial class RandomizerForm : Form
                     case 2: selecter.Left += -519; break;                       // Center Column
                 }
             }
-            selecter.Name = "tableSelecter_" + (controlIndex - 1); // Rename Control for furture rearranging.
         }
     }
     private void RerollAllFields_Click(object sender, EventArgs e)
@@ -61,16 +85,29 @@ public partial class RandomizerForm : Form
     }
     private void SaveLoadoutButton_Click(object sender, EventArgs e)
     {
+        if (Controls.OfType<TableSelecterControl>().Count() == 0) return;
         LoadOutModel loadOutModel= new LoadOutModel();
         foreach (TableSelecterControl selecter in Controls.OfType<TableSelecterControl>())
         {
             loadOutModel.Tables.Add(selecter.TableNamesComboBox.Items[selecter.TableNamesComboBox.SelectedIndex].ToString());
         }
         loadOutModel.Name = "Test1";
-        SaveLoadOuts();
+        LoadOuts.Add(loadOutModel);
+        SaveLoadOuts(); 
     }
-    private void SaveLoadOuts()
-    {
 
+
+    private void UseLoadOutButton_Click(object sender, EventArgs e)
+    {
+        // Need to fix this currently skiping every other selector in Main form when removing.
+        while (Controls.OfType<TableSelecterControl>().Count() > 0)
+        {
+            Controls.Remove(Controls.OfType<TableSelecterControl>().First());
+        }
+        var loutOutModel = LoadOuts.FirstOrDefault(x => x.Name == LoadoutComboBox.Text.ToString());
+        foreach (var TableName in loutOutModel.Tables)
+        {
+            CreateTableSelector(TableName);
+        }
     }
 }

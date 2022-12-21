@@ -20,7 +20,7 @@ public static class RandomizerLogic
         }
         if (model.IsTable)
         {
-            output = RunTable(tableList, tableList.Where(x => x.Name.ToString() == model.Value).FirstOrDefault());
+            output = RunTable(tableList, tableList.FirstOrDefault(x => x.Name.ToString() == model.Value));
 
         }
         return output;
@@ -30,7 +30,7 @@ public static class RandomizerLogic
         string output;
         do
         {
-            output = RandomizerLogic.RunTable(tables, table);
+            output = RunTable(tables, table);
             if (usedResults.Count == table.TableItems.Count) usedResults.Clear();
         } while (usedResults.Contains(output));
 
