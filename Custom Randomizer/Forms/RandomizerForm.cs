@@ -9,20 +9,24 @@ public partial class RandomizerForm : Form
         InitializeComponent();
         LoadLoadOuts();
     }
+
     private void LoadTables()
     {
         Tables = JsonConverter.ReadJsonFile<List<TableModel>>($@".\Tables.json");
     }
+
     private void LoadLoadOuts()
     {
         LoadOuts = JsonConverter.ReadJsonFile<List<LoadOutModel>>($@".\LoadOuts.json");
         LoadLoadOutComboBox();
     }
+
     private void SaveLoadOuts()
     {
         JsonConverter.WriteToFile<List<LoadOutModel>>(LoadOuts, $@".\LoadOuts.json");
         LoadLoadOutComboBox();
     }
+
     private void LoadLoadOutComboBox()
     {
         LoadoutComboBox.Items.Clear();
@@ -75,6 +79,7 @@ public partial class RandomizerForm : Form
             }
         }
     }
+
     private void RerollAllFields_Click(object sender, EventArgs e)
     {
         foreach (TableSelecterControl selecter in Controls.OfType<TableSelecterControl>())
@@ -83,19 +88,21 @@ public partial class RandomizerForm : Form
             selecter.RerollButton_Click(this, EventArgs.Empty);
         }
     }
+
     private void SaveLoadoutButton_Click(object sender, EventArgs e)
     {
         if (Controls.OfType<TableSelecterControl>().Count() == 0) return;
         LoadOutModel loadOutModel= new LoadOutModel();
         foreach (TableSelecterControl selecter in Controls.OfType<TableSelecterControl>())
         {
-            loadOutModel.Tables.Add(selecter.TableNamesComboBox.Items[selecter.TableNamesComboBox.SelectedIndex].ToString());
+            loadOutModel.Tables.Add(selecter.TableNamesComboBox.Text.ToString());
         }
-        loadOutModel.Name = "Test1";
+        //change to C# from VB simple input box for name capture.
+        loadOutModel.Name = Microsoft.VisualBasic.Interaction.InputBox("What would you like to name the loadout?","Save New Loud Out");
+
         LoadOuts.Add(loadOutModel);
         SaveLoadOuts(); 
     }
-
 
     private void UseLoadOutButton_Click(object sender, EventArgs e)
     {
@@ -109,5 +116,6 @@ public partial class RandomizerForm : Form
         {
             CreateTableSelector(TableName);
         }
+        RerollAllFields_Click(sender, e);
     }
 }
