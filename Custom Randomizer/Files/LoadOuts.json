@@ -1,0 +1,63 @@
+[
+  {
+    "Name": "Test1",
+    "Tables": [
+      "Race",
+      "Race",
+      "Elf",
+      "Race",
+      "Race",
+      "Race"
+    ]
+  },
+  {
+    "Name": "New Load Out",
+    "Tables": [
+      "Race",
+      "Race"
+    ]
+  },
+  {
+    "Name": "Bar Scene",
+    "Tables": [
+      "Race",
+      "Social Class",
+      "Personality",
+      "Race",
+      "Social Class",
+      "Personality",
+      "Race",
+      "Social Class",
+      "Personality",
+      "Race",
+      "Social Class",
+      "Personality",
+      "Race",
+      "Social Class",
+      "Personality",
+      "Race",
+      "Social Class",
+      "Personality",
+      "Race",
+      "Social Class",
+      "Personality",
+      "Race",
+      "Social Class",
+      "Personality",
+      "Race",
+      "Social Class",
+      "Personality"
+    ]
+  },
+  {
+    "Name": "new loud out 2",
+    "Tables": [
+      "Race",
+      "Social Class",
+      "Personality",
+      "Classes",
+      "Age",
+      "Guiding Ideal"
+    ]
+  }
+]

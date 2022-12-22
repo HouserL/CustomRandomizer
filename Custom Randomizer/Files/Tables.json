@@ -1,0 +1,2366 @@
+[
+    {
+      "Id": 0,
+      "Name": "Race",
+      "TableItems": [
+        {
+          "Value": "Dragonborn",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "Dwarf",
+          "Weight": 10,
+          "IsTable": true
+        },
+        {
+          "Value": "Elf",
+          "Weight": 3,
+          "IsTable": true
+        },
+        {
+          "Value": "Gnome",
+          "Weight": 6,
+          "IsTable": true
+        },
+        {
+          "Value": "Half-Elf",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Half-Orc",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Hobbit",
+          "Weight": 10,
+          "IsTable": true
+        },
+        {
+          "Value": "Human",
+          "Weight": 48,
+          "IsTable": false
+        },
+        {
+          "Value": "Tiefling",
+          "Weight": 4,
+          "IsTable": true
+        },
+        {
+          "Value": "Uncommon Race",
+          "Weight": 10,
+          "IsTable": true
+        },
+        {
+          "Value": "Rare Race",
+          "Weight": 1,
+          "IsTable": true
+        },
+        {
+          "Value": "Monster Race",
+          "Weight": 4,
+          "IsTable": true
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0, 
+      "Name": "Uncommon Race",
+      "TableItems": [
+        {
+          "Value": "Aarakcokra",
+          "Weight": 10,
+          "IsTable": false
+        },
+        {
+          "Value": "Aasimar",
+          "Weight": 4,
+          "IsTable": false
+        },
+        {
+          "Value": "Bariaur",
+          "Weight": 6,
+          "IsTable": false
+        },
+        {
+          "Value": "Centaur",
+          "Weight": 7,
+          "IsTable": false
+        },
+        {
+          "Value": "Firbolg",
+          "Weight": 6,
+          "IsTable": false
+        },
+        {
+          "Value": "Genasi",
+          "Weight": 7,
+          "IsTable": true
+        },
+        {
+          "Value": "Goliath",
+          "Weight": 8,
+          "IsTable": false
+        },
+        {
+          "Value": "Kenku",
+          "Weight": 9,
+          "IsTable": false
+        },
+        {
+          "Value": "Lizardmen",
+          "Weight": 12,
+          "IsTable": false
+        },
+        {
+          "Value": "Minotaur",
+          "Weight": 8,
+          "IsTable": false
+        },
+        {
+          "Value": "Tabaxi",
+          "Weight": 17,
+          "IsTable": false
+        },
+        {
+          "Value": "Tortle",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "Triton",
+          "Weight": 4,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,
+      "Name": "Rare Race",
+      "TableItems": [
+        {
+          "Value": "Changeling",
+          "Weight": 13,
+          "IsTable": false
+        },
+        {
+          "Value": "Eladrin",
+          "Weight": 31,
+          "IsTable": true
+        },
+        {
+          "Value": "Fey\u0027ri",
+          "Weight": 19,
+          "IsTable": false
+        },
+        {
+          "Value": "Githyanki",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "Githzarai",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "Gith",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Modron",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Revenant",
+          "Weight": 17,
+          "IsTable": false
+        },
+        {
+          "Value": "Shadar\u0027kai",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "Shade",
+          "Weight": 3,
+          "IsTable": false
+        },
+        {
+          "Value": "Shifter",
+          "Weight": 8,
+          "IsTable": false
+        },
+        {
+          "Value": "Warforged",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,
+      "Name": "Monster Race",
+      "TableItems": [
+        {
+          "Value": "Bugbear",
+          "Weight": 9,
+          "IsTable": false
+        },
+        {
+          "Value": "Fear-Dearg",
+          "Weight": 20,
+          "IsTable": false
+        },
+        {
+          "Value": "Goblin",
+          "Weight": 15,
+          "IsTable": false
+        },
+        {
+          "Value": "Grung",
+          "Weight": 3,
+          "IsTable": false
+        },
+        {
+          "Value": "Hobgoblin",
+          "Weight": 10,
+          "IsTable": false
+        },
+        {
+          "Value": "Kobold",
+          "Weight": 14,
+          "IsTable": false
+        },
+        {
+          "Value": "Orc",
+          "Weight": 28,
+          "IsTable": false
+        },
+        {
+          "Value": "Yuan-ti",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,  
+      "Name": "Elf",
+      "TableItems": [
+        {
+          "Value": "Sun Elf",
+          "Weight": 30,
+          "IsTable": false
+        },
+        {
+          "Value": "Moon Elf",
+          "Weight": 30,
+          "IsTable": false
+        },
+        {
+          "Value": "Wood Elf",
+          "Weight": 30,
+          "IsTable": false
+        },
+        {
+          "Value": "Dark Elf",
+          "Weight": 7,
+          "IsTable": false
+        },
+        {
+          "Value": "Air Elf",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Sea Elf",
+          "Weight": 2,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,
+      "Name": "Dwarf",
+      "TableItems": [
+        {
+          "Value": "Duergar",
+          "Weight": 12,
+          "IsTable": false
+        },
+        {
+          "Value": "Hill Dwarf",
+          "Weight": 44,
+          "IsTable": false
+        },
+        {
+          "Value": "Mountain Dwarf",
+          "Weight": 44,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,  
+      "Name": "Gnome",
+      "TableItems": [
+        {
+          "Value": "Forest Gnome",
+          "Weight": 48,
+          "IsTable": false
+        },
+        {
+          "Value": "Rock Gnome",
+          "Weight": 48,
+          "IsTable": false
+        },
+        {
+          "Value": "Deep Gnome",
+          "Weight": 4,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,  
+      "Name": "Tiefling",
+      "TableItems": [
+        {
+          "Value": "Infernal Tiefling",
+          "Weight": 45,
+          "IsTable": false
+        },
+        {
+          "Value": "Abyssal Tiefling",
+          "Weight": 41,
+          "IsTable": false
+        },
+        {
+          "Value": "Yuglothian Tiefling",
+          "Weight": 14,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,  
+      "Name":"Hobbit",
+      "TableItems": [
+        {
+          "Value": "Stout Hobbit",
+          "Weight": 50,
+          "IsTable": false
+        },
+        {
+          "Value": "Lightfoot Hobbit",
+          "Weight": 50,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,  
+      "Name":"Eladrin",
+      "TableItems": [
+        {
+          "Value": "Autumn Eladrin",
+          "Weight": 25,
+          "IsTable": false
+        },
+        {
+          "Value": "Spring Eladrin",
+          "Weight": 25,
+          "IsTable": false
+        },
+        {
+          "Value": "Summer Eladrin",
+          "Weight": 25,
+          "IsTable": false
+        },
+        {
+          "Value": "Winter Eladrin",
+          "Weight": 25,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,  
+      "Name": "Genasi",
+      "TableItems": [
+        {
+          "Value": "Air Genasi",
+          "Weight": 25,
+          "IsTable": false
+        },
+        {
+          "Value": "Earth Genasi",
+          "Weight": 25,
+          "IsTable": false
+        },
+        {
+          "Value": "Fire Genasi",
+          "Weight": 25,
+          "IsTable": false
+        },
+        {
+          "Value": "Water Genasi",
+          "Weight": 25,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,
+      "Name": "Classes",
+      "TableItems": [
+        {
+          "Value": "Artificer",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Barbarian",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Bard",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Cleric",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Druid",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Fighter",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Monk",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Mystic",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Paladin",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Ranger",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Rogue",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Sorcerer",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Warlock",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Wizard",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Cultist",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Various",
+          "Weight": 4,
+          "IsTable": false
+        },
+        {
+          "Value": "Unclassified",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 20
+    },
+    {
+      "Id": 0,  
+      "Name": "Mannerisms",
+      "TableItems": [
+        {
+          "Value": "Prone to song, whistle, or humming",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Speaks in rhyme or peculiarly",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Particularly low or high voice",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Slurs words, lisps or stutters",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Enunciates overly clearly",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Speaks loudly",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Whispers",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Uses flowery speech or long words",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Frequently uses the wrong word",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Uses colorful oaths or exclamations",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Makes constant jokes or puns",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Prone to predictions of doom",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Fidgets",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Squints",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Stares into the distance",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Chews something",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Paces",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Taps fingers",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Bites fingernails",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Twirls hair or tugs beard",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 20
+    },
+    {
+      "Id": 0,   
+      "Name": "Interaction Traits",
+      "TableItems": [
+        {
+          "Value": "Argumentative",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Arrogant",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Blustering",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Rude",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Curious",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Friendly",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Honest",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Hot tempered",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Irritable",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Ponderous",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Quiet",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Suspicious",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 12
+    },
+    {
+      "Id": 0,
+      "Name": "Fear",
+      "TableItems": [
+        {
+          "Value": "Panphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Acrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Neophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Arachnophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Autophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Thantophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Omphalophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Ophidiophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Pyrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Mysophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Entomophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Xenophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Triskaidekaphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Agoraphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Scopophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Somniphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Nyctophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Gymnophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Zoophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Ligyrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Hemophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Claustrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Gynophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Xanthophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Pedophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Gerontophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Chirophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Chroptophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Herpetophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Hylophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Dysmorphophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Gelotophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Bogyphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Algophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Aichmophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Haptephobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Pediophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Wiccaphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Astraphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Sociophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Atychiphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Phobophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Androphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Oikophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Trypophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Anthrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Emetophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Glossophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Amychophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Ombrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Decidophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Dishabiliophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Scoleciphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Spectrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Murophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Coulrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Disposophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Traumatophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Ophthalmophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Megalophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Phallophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Angrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Defecaloesiophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Anablephobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Eisoptrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Numerophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Phronemophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Poinephobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Pteronophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Ephebiphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Dextrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Kathisophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Leukophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Symmetrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Pogonophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Heterophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Dystychiphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Philemaphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Athazagoraphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Ablutophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Demonophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Enochlophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Erythrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Melanophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Necrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Oneirophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Sexophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Teratophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Aquaphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Taphophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Herpetophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Teraphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Maskaphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Sciophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Mazeophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Hamartophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Oneirogmophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Gephyrophobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Toxiphobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Kosmikophobia",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,  
+      "Name": "Alignment",
+      "TableItems": [
+        {
+          "Value": "LG",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "NG",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "CG",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "LN",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "N",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "CN",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "LE",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "NE",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "CE",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 9
+    },
+    {
+      "Id": 0,  
+      "Name":"Reason To Adventure",
+      "TableItems": [
+        {
+          "Value": "Accused of a crime they did not commit.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Accused of a crime they DID commit.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Escaped slavery or indentured servitude.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Swore an oath.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Owes money.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Farm devastated by locusts or drought.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Town destroyed by monsters/brigands.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Town devastated by plague.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Guilt or shame.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Fleeing a loveless or arranged marriage.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Seeking Revenge.",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Deserted the army or clergy.",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 12
+    },
+    {
+      "Id": 0,  
+      "Name":"Loves/Hates",
+      "TableItems": [
+        {
+          "Value": "People of the opposite sex",
+          "Weight": 10,
+          "IsTable": false
+        },
+        {
+          "Value": "People of the same sex",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "A particular person of the opposite sex",
+          "Weight": 10,
+          "IsTable": false
+        },
+        {
+          "Value": "A particular person of the same sex",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "A child, theirs",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "A child, someone elses",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Their faith",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "Their village/town",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Eating",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Drinking",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Drinking booze",
+          "Weight": 5,
+          "IsTable": false
+        },
+        {
+          "Value": "Violence",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "A childhood friend",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "A former/present coworker",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "A former/present leader",
+          "Weight": 7,
+          "IsTable": false
+        },
+        {
+          "Value": "The military",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Their country",
+          "Weight": 5,
+          "IsTable": false
+        },
+        {
+          "Value": "Another country",
+          "Weight": 5,
+          "IsTable": false
+        },
+        {
+          "Value": "A season of the year",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "A time of day",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "A type of weather",
+          "Weight": 3,
+          "IsTable": false
+        },
+        {
+          "Value": "Sleep",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Riding in vehicles rather than walking",
+          "Weight": 3,
+          "IsTable": false
+        },
+        {
+          "Value": "The idea of luck",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "People poorer than them",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "People richer than them",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Money",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "Creature comforts",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Being outdoors",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "A parent",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "An old flame",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Song",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Long walks",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Keeping their equipment well",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Adventure/new things",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Clergy",
+          "Weight": 3,
+          "IsTable": false
+        },
+        {
+          "Value": "Business/business people",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Arguing",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Reading",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Learning new things",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Studying history",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Manipulative behavior",
+          "Weight": 2,
+          "IsTable": false
+        },
+        {
+          "Value": "Exercise",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Bathing/self cleaning",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Fancy food",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Expensive clothes",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Books",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Gambling/vices",
+          "Weight": 3,
+          "IsTable": false
+        },
+        {
+          "Value": "The smell of animals",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Quirky behaviors",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,  
+      "Name": "Appearance",
+      "TableItems": [
+        {
+          "Value": "Distinctive jewelry",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Piercings",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Flamboyant or outlandish clothes",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Formal, clean clothes",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Ragged, dirty clothes",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Pronounced scar",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Missing teeth",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Missing fingers",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Unusual eye colors/heterochromia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Tattoos",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Birthmark",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Unusual skin color",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Bald",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Braided beard or hair",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Unusual hair color",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Nervous eye twitch",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Distinctive nose",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Distinctive posture",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Exceptionally beautiful",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Exceptionally ugly",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 20
+    },
+    {
+      "Id": 0,  
+      "Name": "Goal Ideas",
+      "TableItems": [
+        {
+          "Value": "Bring justice",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Clear an innocent",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Protect or hide",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Discover the origin of a phenomena",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Find a wanted figure",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Overthrow a tyrant",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Uncover a conspiracy",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Negotiate peace",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Secure aid from the powerful",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Help evil to find redemption",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Parley with a villain",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Smuggle weapons, items",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Stop smugglers",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Gather intelligence",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Win a tournament",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Determine an identity",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Locate a stolen item",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Make sure a wedding happens",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Snoop on something odd",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Avoid any troubles around here",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 20
+    },
+    {
+      "Id": 0,
+      "Name": "Age",
+      "TableItems": [
+        {
+          "Value": "Child",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Youth",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Teen",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Adult",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Middle aged",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Silver",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Elderly",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Ancient",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 8
+    },
+    {
+      "Id": 0,
+      "Name": "Guiding Ideal",
+      "TableItems": [
+        {
+          "Value": "Political",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Religious",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Military",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Crime/underworld",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Art/culture",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Philosophy/learning",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Guild",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Secret society",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Magical/society",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Family/dynasty/tribe",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 10
+    },
+    {
+      "Id": 0,
+      "Name": "Personality",
+      "TableItems": [
+        {
+          "Value": "Murderous",
+          "Weight": 10,
+          "IsTable": false
+        },
+        {
+          "Value": "Hostile",
+          "Weight": 20,
+          "IsTable": false
+        },
+        {
+          "Value": "Indifferent",
+          "Weight": 35,
+          "IsTable": false
+        },
+        {
+          "Value": "Friendly",
+          "Weight": 25,
+          "IsTable": false
+        },
+        {
+          "Value": "Charmed",
+          "Weight": 10,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,
+      "Name":"Social Class",
+      "TableItems": [
+        {
+          "Value": "Pauper",
+          "Weight": 19,
+          "IsTable": false
+        },
+        {
+          "Value": "Poor",
+          "Weight": 18,
+          "IsTable": false
+        },
+        {
+          "Value": "Lower class",
+          "Weight": 36,
+          "IsTable": false
+        },
+        {
+          "Value": "Middle class",
+          "Weight": 13,
+          "IsTable": false
+        },
+        {
+          "Value": "Wealthy",
+          "Weight": 8,
+          "IsTable": false
+        },
+        {
+          "Value": "Noble wealth",
+          "Weight": 5,
+          "IsTable": false
+        },
+        {
+          "Value": "Kingly wealth",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 100
+    },
+    {
+      "Id": 0,
+      "Name": "Talents",
+      "TableItems": [
+        {
+          "Value": "Plays musical instrument",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Speaks several languages fluently",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Unbelievably lucky",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Perfect memory",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Great with animals",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Great with children",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Great at puzzles",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Great at one game",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Great at impersonations",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Draws beautifully",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Paints beautifully",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Sings beautifully",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Drinks everyone under the table",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Expert carpenter",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Expert cook",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Expert dart thrower or stone skipper",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Expert juggler",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Skilled actor and disguiser",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Skilled dancer",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Knows thieves\u0027 cant",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 20
+    },
+    {
+      "Id": 0,
+      "Name": "Bad Ideal",
+      "TableItems": [
+        {
+          "Value": "Domination",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Greed",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Might",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Pain",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Retribution",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Slaughter",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 6
+    },
+    {
+      "Id": 0,  
+      "Name": "Good Ideal",
+      "TableItems": [
+        {
+          "Value": "Beauty",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Charity",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Greater Good",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Life",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Respect",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Self-sacrifice",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 6
+    },
+    {
+      "Id": 0, 
+      "Name": "Lawful Ideal",
+      "TableItems": [
+        {
+          "Value": "Community",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Fairness",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Honor",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Logic",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Responsibility",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Tradition",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 6
+    },
+    {
+      "Id": 0, 
+      "Name": "Chaotic Ideal",
+      "TableItems": [
+        {
+          "Value": "Change",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Creativity",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Freedom",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Independence",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "No Limits",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Whimsy",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 6
+    },
+    {
+      "Id": 0,  
+      "Name": "Neutral Ideal",
+      "TableItems": [
+        {
+          "Value": "Balance",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Knowledge",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Live and let live",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Moderation",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Neutrality",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "People",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 6
+    },
+    {
+      "Id": 0, 
+      "Name": "Other Ideal",
+      "TableItems": [
+        {
+          "Value": "Aspiration",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Discovery",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Glory",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Nation",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Redemption",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Self-Knowledge",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 6
+    },
+    {
+      "Id": 0,
+      "Name": "Flaws",
+      "TableItems": [
+        {
+          "Value": "Forbidden love or susceptibility",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Enjoys decadent pleasures",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Arrogance",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Envies another\u0027s position or status",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Overpowering greed",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Prone to rage",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Has a powerful enemy",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Specific phobia",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Shameful or scandalous history",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Secret crime or misdeed",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Possession of a forbidden lore",
+          "Weight": 1,
+          "IsTable": false
+        },
+        {
+          "Value": "Foolhardy bravery",
+          "Weight": 1,
+          "IsTable": false
+        }
+      ],
+      "TableTotalWeight": 12
+    }
+  ]
