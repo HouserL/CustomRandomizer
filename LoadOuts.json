@@ -1,5 +1,23 @@
 [
   {
+    "Name": "Test1",
+    "Tables": [
+      "Race",
+      "Race",
+      "Elf",
+      "Race",
+      "Race",
+      "Race"
+    ]
+  },
+  {
+    "Name": "New Load Out",
+    "Tables": [
+      "Race",
+      "Race"
+    ]
+  },
+  {
     "Name": "Bar Scene",
     "Tables": [
       "Race",
@@ -32,7 +50,7 @@
     ]
   },
   {
-    "Name": "Basic NPC",
+    "Name": "new loud out 2",
     "Tables": [
       "Race",
       "Social Class",

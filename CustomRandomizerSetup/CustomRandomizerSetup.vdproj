@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_38AAD5F3B5ED4A9FBD7BEA33AFE6C5CC"
+        "MsmKey" = "8:_1BAFEE88B4DA404D9C77341D8626F409"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -34,6 +34,12 @@
         "Entry"
         {
         "MsmKey" = "8:_CF02E4E7164044978DF0C9A63AF305FA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E25410139CF94793A1103EFA1771C007"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -162,9 +168,9 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_38AAD5F3B5ED4A9FBD7BEA33AFE6C5CC"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1BAFEE88B4DA404D9C77341D8626F409"
             {
-            "SourcePath" = "8:..\\Custom Randomizer\\Files\\Tables.json"
+            "SourcePath" = "8:..\\Tables.json"
             "TargetName" = "8:Tables.json"
             "Tag" = "8:"
             "Folder" = "8:_E55E7F040D1140C297370B065C0CE593"
@@ -205,6 +211,26 @@
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF02E4E7164044978DF0C9A63AF305FA"
             {
             "SourcePath" = "8:..\\Custom Randomizer\\Files\\LoadOuts.json"
+            "TargetName" = "8:LoadOuts.json"
+            "Tag" = "8:"
+            "Folder" = "8:_E55E7F040D1140C297370B065C0CE593"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E25410139CF94793A1103EFA1771C007"
+            {
+            "SourcePath" = "8:..\\LoadOuts.json"
             "TargetName" = "8:LoadOuts.json"
             "Tag" = "8:"
             "Folder" = "8:_E55E7F040D1140C297370B065C0CE593"
@@ -301,7 +327,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CustomRandomizer"
         "ProductCode" = "8:{3641C9A2-83F7-426A-8C2B-19307F9101DB}"
-        "PackageCode" = "8:{7FADEE16-96BA-4DA9-9BDD-15FEE4039BAE}"
+        "PackageCode" = "8:{FE22D3DC-8739-4867-BEB4-5151CFE328CC}"
         "UpgradeCode" = "8:{21884591-886D-4DBC-BE4D-4FA7447D447A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -822,7 +848,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_47E54650DEB0407F9920D8E2238B7E35"
             {
-            "SourcePath" = "8:..\\Custom Randomizer\\obj\\Debug\\net6.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\Custom Randomizer\\obj\\Release\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_503F7B2FA5D54E1FB66D5670D4AC5C5F"

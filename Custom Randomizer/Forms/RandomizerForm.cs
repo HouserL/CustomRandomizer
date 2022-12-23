@@ -3,6 +3,7 @@ public partial class RandomizerForm : Form
 {
     public List<TableModel> Tables = new();
     public List<LoadOutModel> LoadOuts = new();
+    private string _roaming = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + $@"\Verdant Studios\";
     public RandomizerForm()
     {
         LoadTables();
@@ -12,18 +13,18 @@ public partial class RandomizerForm : Form
 
     private void LoadTables()
     {
-        Tables = JsonConverter.ReadJsonFile<List<TableModel>>($@".\Files\Tables.json");
+        Tables = JsonConverter.ReadJsonFile<List<TableModel>>($@"{_roaming}Tables.json");
     }
 
     private void LoadLoadOuts()
     {
-        LoadOuts = JsonConverter.ReadJsonFile<List<LoadOutModel>>($@".\Files\LoadOuts.json");
+        LoadOuts = JsonConverter.ReadJsonFile<List<LoadOutModel>>($@"{_roaming}LoadOuts.json");
         LoadLoadOutComboBox();
     }
 
     private void SaveLoadOuts()
     {
-        JsonConverter.WriteToFile(LoadOuts, $@".\Files\LoadOuts.json");
+        JsonConverter.WriteToFile(LoadOuts, $@"{_roaming}LoadOuts.json");
         LoadLoadOutComboBox();
     }
 

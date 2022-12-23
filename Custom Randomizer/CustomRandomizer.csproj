@@ -11,33 +11,27 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DebugType>none</DebugType>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DebugType>none</DebugType>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Files\**" />
     <Compile Remove="Logic\**" />
     <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Files\**" />
     <EmbeddedResource Remove="Logic\**" />
     <EmbeddedResource Remove="Models\**" />
+    <None Remove="Files\**" />
     <None Remove="Logic\**" />
     <None Remove="Models\**" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CustomRandomizer.Library\CustomRandomizer.Library.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Files\LoadOuts.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Files\Tables.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
