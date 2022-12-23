@@ -37,16 +37,16 @@
             // ResultsLabel
             // 
             this.ResultsLabel.AutoSize = true;
-            this.ResultsLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ResultsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ResultsLabel.Location = new System.Drawing.Point(3, 39);
             this.ResultsLabel.Name = "ResultsLabel";
-            this.ResultsLabel.Size = new System.Drawing.Size(512, 25);
+            this.ResultsLabel.Size = new System.Drawing.Size(460, 21);
             this.ResultsLabel.TabIndex = 7;
             this.ResultsLabel.Text = "12345678901234567890123456789012345678901234567890";
             // 
             // RemoveControlButton
             // 
-            this.RemoveControlButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RemoveControlButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RemoveControlButton.Location = new System.Drawing.Point(415, 3);
             this.RemoveControlButton.Name = "RemoveControlButton";
             this.RemoveControlButton.Size = new System.Drawing.Size(95, 34);
@@ -56,7 +56,7 @@
             // 
             // RerollButton
             // 
-            this.RerollButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RerollButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RerollButton.Location = new System.Drawing.Point(247, 3);
             this.RerollButton.Name = "RerollButton";
             this.RerollButton.Size = new System.Drawing.Size(84, 33);
@@ -67,11 +67,11 @@
             // 
             // TableNamesComboBox
             // 
-            this.TableNamesComboBox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TableNamesComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TableNamesComboBox.FormattingEnabled = true;
             this.TableNamesComboBox.Location = new System.Drawing.Point(3, 3);
             this.TableNamesComboBox.Name = "TableNamesComboBox";
-            this.TableNamesComboBox.Size = new System.Drawing.Size(238, 33);
+            this.TableNamesComboBox.Size = new System.Drawing.Size(238, 29);
             this.TableNamesComboBox.TabIndex = 4;
             this.TableNamesComboBox.SelectedIndexChanged += new System.EventHandler(this.TableNamesComboBox_SelectedIndexChanged);
             // 

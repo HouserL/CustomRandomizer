@@ -6,8 +6,7 @@ public static class JsonConverter
 {
     public static string ObjectToJson<T>(T jsonObject)
     {
-        var convertString = JsonSerializer.Serialize(jsonObject, new JsonSerializerOptions { WriteIndented = true, });
-        return convertString;
+        return JsonSerializer.Serialize(jsonObject, new JsonSerializerOptions { WriteIndented = true, });
     }
     public static void WriteToFile<T>(T jsonObject, string filePath)
     {
@@ -17,20 +16,17 @@ public static class JsonConverter
     }
     private static T FromJson<T>(string serialObject)
     {
-        var output = JsonSerializer.Deserialize<T>(serialObject);
-        return output;
+        return JsonSerializer.Deserialize<T>(serialObject);
     }
-    public static T ReadJsonFile<T>(string filePath)
+    public static T ReadJsonFile<T>(string filePath) where T : class, new()
     {
         try
         {
-            var loadedFile = FromJson<T>(File.ReadAllText(filePath));
-            return loadedFile;
+            return FromJson<T>(File.ReadAllText(filePath));
         }
         catch (Exception)
         {
-            dynamic output = null;
-            return output;
+            return new T();
         }
     }
 }

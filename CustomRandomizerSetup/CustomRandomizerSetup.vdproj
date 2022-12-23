@@ -33,12 +33,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CF02E4E7164044978DF0C9A63AF305FA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E25410139CF94793A1103EFA1771C007"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -208,26 +202,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF02E4E7164044978DF0C9A63AF305FA"
-            {
-            "SourcePath" = "8:..\\Custom Randomizer\\Files\\LoadOuts.json"
-            "TargetName" = "8:LoadOuts.json"
-            "Tag" = "8:"
-            "Folder" = "8:_E55E7F040D1140C297370B065C0CE593"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E25410139CF94793A1103EFA1771C007"
             {
             "SourcePath" = "8:..\\LoadOuts.json"
@@ -327,13 +301,13 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CustomRandomizer"
         "ProductCode" = "8:{3641C9A2-83F7-426A-8C2B-19307F9101DB}"
-        "PackageCode" = "8:{FE22D3DC-8739-4867-BEB4-5151CFE328CC}"
+        "PackageCode" = "8:{4219FBFA-1F35-4C11-BBED-83C4CCB596E6}"
         "UpgradeCode" = "8:{21884591-886D-4DBC-BE4D-4FA7447D447A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:TRUE"
+        "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
         "Manufacturer" = "8:Verdant Studios"
         "ARPHELPTELEPHONE" = "8:"
@@ -447,6 +421,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_703D106FEAA6425E8FD4558135E7418A"
+            {
+            "Name" = "8:Shortcut to CustomRandomizer.exe"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_7999325CAA2A4DCBBB4518670DBBDC84"
+            "Folder" = "8:_3647358DB25A4ABDB6DE773D7F8157CE"
+            "WorkingFolder" = "8:_503F7B2FA5D54E1FB66D5670D4AC5C5F"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E0620641D6534EB89409E73208A3FBAC"
+            {
+            "Name" = "8:Shortcut to CustomRandomizer.exe"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_7999325CAA2A4DCBBB4518670DBBDC84"
+            "Folder" = "8:_62B7ADA0A57D472C8232BF6441254D9D"
+            "WorkingFolder" = "8:_503F7B2FA5D54E1FB66D5670D4AC5C5F"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
