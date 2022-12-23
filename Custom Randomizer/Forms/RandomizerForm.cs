@@ -1,7 +1,7 @@
 namespace CustomRandomizer.Forms;
 public partial class RandomizerForm : Form
 {
-    public static List<TableModel> Tables = new();
+    public List<TableModel> Tables = new();
     public List<LoadOutModel> LoadOuts = new();
     public RandomizerForm()
     {
@@ -12,18 +12,18 @@ public partial class RandomizerForm : Form
 
     private void LoadTables()
     {
-        Tables = JsonConverter.ReadJsonFile<List<TableModel>>($@".\Tables.json");
+        Tables = JsonConverter.ReadJsonFile<List<TableModel>>($@".\Files\Tables.json");
     }
 
     private void LoadLoadOuts()
     {
-        LoadOuts = JsonConverter.ReadJsonFile<List<LoadOutModel>>($@".\LoadOuts.json");
+        LoadOuts = JsonConverter.ReadJsonFile<List<LoadOutModel>>($@".\Files\LoadOuts.json");
         LoadLoadOutComboBox();
     }
 
     private void SaveLoadOuts()
     {
-        JsonConverter.WriteToFile<List<LoadOutModel>>(LoadOuts, $@".\LoadOuts.json");
+        JsonConverter.WriteToFile(LoadOuts, $@".\Files\LoadOuts.json");
         LoadLoadOutComboBox();
     }
 
@@ -41,7 +41,7 @@ public partial class RandomizerForm : Form
 
     private void CreateTableSelector(string tableName)
     {
-        TableSelecterControl tableSelecter = new();
+        TableSelecterControl tableSelecter = new(Tables);
         int count = this.Controls.OfType<TableSelecterControl>().ToList().Count; // Determine how many controls of this type there are.
 
         switch (count % 3) // Place the Control in  a column based on how many controls there are.
@@ -51,12 +51,12 @@ public partial class RandomizerForm : Form
             case 2: tableSelecter.Location = new System.Drawing.Point(1049, (75 * (count / 3)) + 75); break;
         }
         tableSelecter.Name = "tableSelecter_" + (count + 1);
-        tableSelecter.RemoveControlButton.Click += new EventHandler(btnDelete_Click);
+        tableSelecter.RemoveControlButton.Click += new EventHandler(DeleteButton_Click);
         this.Controls.Add(tableSelecter);
         if (tableName != string.Empty) tableSelecter.TableNamesComboBox.Text = tableName;
     }
 
-    public void btnDelete_Click(object sender, EventArgs e)
+    public void DeleteButton_Click(object sender, EventArgs e)
     {
         Button button = (sender as Button);     //Reference the Button which was clicked.
         
@@ -91,8 +91,8 @@ public partial class RandomizerForm : Form
 
     private void SaveLoadoutButton_Click(object sender, EventArgs e)
     {
-        if (Controls.OfType<TableSelecterControl>().Count() == 0) return;
-        LoadOutModel loadOutModel= new LoadOutModel();
+        if (!Controls.OfType<TableSelecterControl>().Any()) return;
+        LoadOutModel loadOutModel= new();
         foreach (TableSelecterControl selecter in Controls.OfType<TableSelecterControl>())
         {
             loadOutModel.Tables.Add(selecter.TableNamesComboBox.Text.ToString());
@@ -106,8 +106,7 @@ public partial class RandomizerForm : Form
 
     private void UseLoadOutButton_Click(object sender, EventArgs e)
     {
-        // Need to fix this currently skiping every other selector in Main form when removing.
-        while (Controls.OfType<TableSelecterControl>().Count() > 0)
+        while (Controls.OfType<TableSelecterControl>().Any())
         {
             Controls.Remove(Controls.OfType<TableSelecterControl>().First());
         }
@@ -117,5 +116,10 @@ public partial class RandomizerForm : Form
             CreateTableSelector(TableName);
         }
         RerollAllFields_Click(sender, e);
+    }
+
+    private void TableConfigurer_Click(object sender, EventArgs e)
+    {
+
     }
 }

@@ -10,6 +10,27 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logic\**" />
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Logic\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Logic\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomRandomizer.Library\CustomRandomizer.Library.csproj" />
+  </ItemGroup>
+
   <ItemGroup>
     <None Update="Files\LoadOuts.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

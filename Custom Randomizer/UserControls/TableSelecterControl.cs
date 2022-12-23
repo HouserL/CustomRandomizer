@@ -3,10 +3,10 @@ public partial class TableSelecterControl : UserControl
 {
     private List<string> _usedResults = new();
     private List<TableModel> _tables;
-    public TableSelecterControl()
+    public TableSelecterControl(List<TableModel> tables)
     {
         InitializeComponent();
-        _tables = RandomizerForm.Tables;
+        _tables = tables;
         LoadComboBox();
     }
     private void LoadComboBox()

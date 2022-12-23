@@ -64,6 +64,7 @@
             this.TableConfigurer.TabIndex = 3;
             this.TableConfigurer.Text = "Table Configurer Button";
             this.TableConfigurer.UseVisualStyleBackColor = true;
+            this.TableConfigurer.Click += new System.EventHandler(this.TableConfigurer_Click);
             // 
             // SaveLoadoutButton
             // 
@@ -113,7 +114,6 @@
         #endregion
 
         private Button AddTableSelector;
-        private TableSelecterControl tableSelecterControl1;
         private Button RerollAllFields;
         private Button TableConfigurer;
         private Button SaveLoadoutButton;
