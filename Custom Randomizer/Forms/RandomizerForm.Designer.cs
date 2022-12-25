@@ -96,8 +96,10 @@
             // 
             // RandomizerForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(618, 93);
             this.Controls.Add(this.UseLoadOutButton);
             this.Controls.Add(this.LoadoutComboBox);

@@ -1,207 +1,101 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿namespace CustomRandomizer.UserControls;
 
-namespace CustomRandomizer.UserControls
+public partial class TableConfigurerControl : UserControl
 {
-    public partial class TableConfigurerControl : UserControl
+    private List<TableModel> _tables = new();
+
+    public TableConfigurerControl(List<TableModel> tables)
     {
-        private List<TableModel> _tables = new();
+        InitializeComponent();
+        _tables = tables;
+        LoadList();
+    }
 
-        public List<TableModel> Tables
+    private void AddNewTable_Click(object sender, EventArgs e)
+    {
+        var table = new TableModel();
+        table.Name = "New Table";
+        _tables.Add(table);
+        LoadList(table);
+        UpdateDataSource();
+        ResizeColumns();
+    }
+
+    private void RemoveTable_Click(object sender, EventArgs e)
+    {
+        _tables.Remove(_tables.FirstOrDefault(x => x.Name == ListBoxTables.Text));
+        LoadList();
+    }
+    
+    private void AddRow_Click(object sender, EventArgs e)
+    {
+        _tables.FirstOrDefault(x => x.Name == ListBoxTables.Text).TableItems.Add(new TableItemModel());
+        UpdateDataSource();
+        ResizeColumns();
+    }
+
+    private void RemoveRow_Click(object sender, EventArgs e)
+    {
+        if (_tables.FirstOrDefault(x => x.Name == ListBoxTables.Text).TableItems.Count == 0) return;
+       
+        _tables.FirstOrDefault(x => x.Name == ListBoxTables.Text).TableItems.RemoveAt(TableItemsDataGridView.CurrentCell.RowIndex);
+        UpdateDataSource();
+        ResizeColumns();
+    }
+
+    private void TestTable_Click(object sender, EventArgs e)
+    {
+        RichTextBoxResults.Text = string.Empty;
+        try
         {
-            get { return _tables; }
-            set { _tables = value; }
-        }
-
-        public TableConfigurerControl(List<TableModel> tables)
-        {
-            InitializeComponent();
-            _tables = tables;
-            LoadData();
-        }
-
-
-
-        public void LoadData()
-        {
-            try
+            for (int i = 0; i < Convert.ToInt16(TextBoxTestNumber.Text.ToString()); i++) //Run Table for x times based on text box.
             {
-                TextBoxTableName.Text = _tables[0].Name;
-                DataGridView1.DataSource = _tables[0].TableItems;
-                LoadList(0);
-            }
-            catch (Exception)
-            {
-                //throw;
-            }
-
-        }
-        private void LoadList(int index)
-        {
-            ListBoxTables.Items.Clear();
-            ListBoxTables.Items.AddRange(_tables.Select(x => x.Name).ToArray());
-            ListBoxTables.SelectedIndex = index;
-        }
-        private void ListBoxTables_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int inttotal = 0;
-            for (int i = 0; i < _tables[ListBoxTables.SelectedIndex].TableItems.Count; i++)
-            {
-                inttotal += _tables[ListBoxTables.SelectedIndex].TableItems[i].Weight;
-            }
-            DataGridView1.DataSource = _tables[ListBoxTables.SelectedIndex].TableItems;
-            TextBoxTableName.Text = _tables[ListBoxTables.SelectedIndex].Name;
-            label2.Text = "Total number of chances in table is x out of " + inttotal;
-            var column = DataGridView1.Columns[0];
-            //column.Width = 100;
-        }
-        private void EditName_CheckedChanged(object sender, EventArgs e)
-        {
-            if (EditName.Checked) TextBoxTableName.ReadOnly = false;
-            else TextBoxTableName.ReadOnly = true;
-        }
-
-        private void AddNewTable_Click(object sender, EventArgs e)
-        {
-            NewTable();
-        }
-
-        private void NewTable()
-        {
-            var _newTable = new TableModel();
-            EditName.Checked = true;
-            TextBoxTableName.Text = "Table Name";
-            DataGridView1.DataSource = _newTable.TableItems;
-            DataGridView1.AutoGenerateColumns = false;
-            DataGridView1.DataSource = null;
-            DataGridView1.Rows.Add();
-
-        }
-        private void SaveTable_Click(object sender, EventArgs e)
-        {
-            var _newTable = new TableModel();
-
-            _newTable.TableItems = new List<TableItemModel>();
-
-            _newTable.Name = TextBoxTableName.Text;
-            for (int i = 0; i < DataGridView1.Rows.Count; i++)
-            {
-                var _newtableitem = new TableItemModel();
-                _newtableitem.Value = DataGridView1.Rows[i].Cells[1].Value.ToString();
-                _newtableitem.Weight = Convert.ToInt32(DataGridView1.Rows[i].Cells[0].Value.ToString());
-                if (DataGridView1.Rows[i].Cells[2].Value == null)
-                {
-                    _newtableitem.IsTable = false;
-                }
-                else
-                {
-                    _newtableitem.IsTable = Convert.ToBoolean(DataGridView1.Rows[i].Cells[2].Value.ToString());
-                }
-                _newTable.TableItems.Add(_newtableitem);
-                EditName.Checked = false;
-
-            }
-            for (int i = 0; i < _tables.Count; i++)
-            {
-                if (_tables[i].Name == TextBoxTableName.Text)
-                {
-                    DialogResult dialogResult = MessageBox.Show("Table with this name already exists do you want to Update that table?", "Warning", MessageBoxButtons.YesNo);
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        _tables.RemoveAt(i);
-                        _tables.Insert(i, _newTable);
-                        return;
-                    }
-                    else if (dialogResult == DialogResult.No)
-                    {
-                        return;
-                    }
-                }
-            }
-            _tables.Add(_newTable);
-            ListBoxTables.Items.Clear();
-            for (int i = 0; i < _tables.Count; i++)
-            {
-                ListBoxTables.Items.Add(_tables[i].Name);
-            }
-            DataGridView1.DataSource = _tables[^1].TableItems;
-            ListBoxTables.SelectedIndex = ListBoxTables.Items.Count - 1;
-        }
-        private void AddRow_Click(object sender, EventArgs e)
-        {
-            if (DataGridView1.DataSource == null)
-            {
-                DataGridView1.Rows.Add();
-            }
-            else
-            {
-                _tables[ListBoxTables.SelectedIndex].TableItems.Add(new TableItemModel());
-                int x = ListBoxTables.SelectedIndex;
-                DataGridView1.DataSource = null;
-                DataGridView1.DataSource = _tables[x].TableItems;
+                RichTextBoxResults.Text += RandomizerLogic.RunTable(_tables, _tables[ListBoxTables.SelectedIndex]) + " ";
             }
         }
-        private void RemoveRow_Click(object sender, EventArgs e)
+        catch (Exception)
         {
-            if (DataGridView1.DataSource == null)
-            {
-                DataGridView1.Rows.RemoveAt(DataGridView1.CurrentCell.RowIndex);
-            }
-            else
-            {
-                if (_tables.FirstOrDefault(x => x.Name == ListBoxTables.Text).TableItems.Count == 0) return;
-                _tables[ListBoxTables.SelectedIndex].TableItems.RemoveAt(DataGridView1.CurrentCell.RowIndex);
-                int x = ListBoxTables.SelectedIndex;
-                DataGridView1.DataSource = null;
-                DataGridView1.DataSource = _tables[x].TableItems;
+            return;
+        }
+    }
 
-            }
-        }
-        private void TestTable_Click(object sender, EventArgs e)
-        {
-            RichTextBoxResults.Text = null;
-            try
-            {
-                for (int i = 0; i < Convert.ToInt16(TextBoxTestNumber.Text.ToString()); i++) //Run Table for x times based on text box.
-                {
-                    RichTextBoxResults.Text += RandomizerLogic.RunTable(_tables, _tables[ListBoxTables.SelectedIndex]) + " ";
-                }
-            }
-            catch (Exception)
-            {
-                return;
-            }
-        }
-        private void TextBoxTestNumber_Leave(object sender, EventArgs e)
-        {
-            try
-            {
-                int i = Convert.ToInt32(TextBoxTableName.Text.ToString());
-            }
-            catch (Exception)
-            {
-                TextBoxTableName.Text = null;
-                return;
-            }
-        }
+    private void ListBoxTables_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        ChangeSelectedTable();
+        ResizeColumns();
+    }
 
-        private void RemoveTable_Click(object sender, EventArgs e)
-        {
-            _tables.Remove(_tables.FirstOrDefault(x => x.Name == ListBoxTables.Text));
-            if (ListBoxTables.SelectedIndex >= _tables.Count)
-            {
-                LoadList(_tables.Count - 1);
-                return;
-            }
-            LoadList(ListBoxTables.SelectedIndex);
+    private void EditName_CheckedChanged(object sender, EventArgs e)
+    {
+        TextBoxTableName.ReadOnly = !TextBoxTableName.ReadOnly;
+    }
 
-        }
+    private void LoadList(TableModel table = null)
+    {
+        ListBoxTables.Items.Clear();
+        ListBoxTables.Items.AddRange(_tables.Select(x => x.Name).OrderBy(x => x).ToArray());
+        ListBoxTables.SelectedIndex = 0;
+        if (table != null) ListBoxTables.SelectedItem = table.Name;
+    }
+
+    private void ChangeSelectedTable(TableModel table = null)
+    {   
+        if(table == null) table = _tables.FirstOrDefault(x => x.Name == ListBoxTables.Text);
+        TableItemsDataGridView.DataSource = table.TableItems;
+        TextBoxTableName.Text = table.Name;
+        label2.Text = $@"Total number of chances in table is x out of {table.TableTotalValue}";
+    }
+
+    private void ResizeColumns()
+    {
+        TableItemsDataGridView.Columns[0].Width = 65;
+        TableItemsDataGridView.Columns[1].Width = 220;
+        TableItemsDataGridView.Columns[2].Width = 70;
+    }
+
+    private void UpdateDataSource()
+    {
+        TableItemsDataGridView.DataSource = null;
+        TableItemsDataGridView.DataSource = _tables.FirstOrDefault(x => x.Name == ListBoxTables.Text).TableItems;
     }
 }

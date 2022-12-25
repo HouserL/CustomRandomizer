@@ -40,14 +40,13 @@
             this.ResultsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ResultsLabel.Location = new System.Drawing.Point(3, 39);
             this.ResultsLabel.Name = "ResultsLabel";
-            this.ResultsLabel.Size = new System.Drawing.Size(460, 21);
+            this.ResultsLabel.Size = new System.Drawing.Size(0, 21);
             this.ResultsLabel.TabIndex = 7;
-            this.ResultsLabel.Text = "12345678901234567890123456789012345678901234567890";
             // 
             // RemoveControlButton
             // 
             this.RemoveControlButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RemoveControlButton.Location = new System.Drawing.Point(415, 3);
+            this.RemoveControlButton.Location = new System.Drawing.Point(337, 3);
             this.RemoveControlButton.Name = "RemoveControlButton";
             this.RemoveControlButton.Size = new System.Drawing.Size(95, 34);
             this.RemoveControlButton.TabIndex = 6;
@@ -84,7 +83,7 @@
             this.Controls.Add(this.RerollButton);
             this.Controls.Add(this.TableNamesComboBox);
             this.Name = "TableSelecterControl";
-            this.Size = new System.Drawing.Size(513, 70);
+            this.Size = new System.Drawing.Size(435, 70);
             this.ResumeLayout(false);
             this.PerformLayout();
 

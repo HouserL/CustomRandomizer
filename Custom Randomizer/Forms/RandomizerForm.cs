@@ -54,9 +54,9 @@ public partial class RandomizerForm : Form
 
         switch (count % 3) // Place the Control in  a column based on how many controls there are.
         {
-            case 0: tableSelecter.Location = new System.Drawing.Point(11, (75 * (count / 3)) + 75); break;
-            case 1: tableSelecter.Location = new System.Drawing.Point(530, (75 * (count / 3)) + 75); break;
-            case 2: tableSelecter.Location = new System.Drawing.Point(1049, (75 * (count / 3)) + 75); break;
+            case 0: tableSelecter.Location = new System.Drawing.Point(10, (75 * (count / 3)) + 75); break;
+            case 1: tableSelecter.Location = new System.Drawing.Point(445, (75 * (count / 3)) + 75); break;
+            case 2: tableSelecter.Location = new System.Drawing.Point(880, (75 * (count / 3)) + 75); break;
         }
         tableSelecter.Name = "tableSelecter_" + (count + 1);
         tableSelecter.RemoveControlButton.Click += new EventHandler(DeleteButton_Click);
@@ -79,13 +79,12 @@ public partial class RandomizerForm : Form
 
     private void ReorderSelectors(TableSelecterControl selecter, int controlIndex)
     {
-
         selecter.Name = "tableSelecter_" + (controlIndex - 1); // Rename control for future actions.
         switch (controlIndex % 3) // Check which Column the Control is in.
         {
-            case 0: selecter.Left += -519; break;                       // Right Column
-            case 1: selecter.Top += -75; selecter.Left += 1038; break;  // Left Column
-            case 2: selecter.Left += -519; break;                       // Center Column
+            case 0: selecter.Left += -435; break;                       // Right Column
+            case 1: selecter.Top += -75; selecter.Left += 870; break;  // Left Column
+            case 2: selecter.Left += -435; break;                       // Center Column
         }
     }
 
@@ -136,17 +135,14 @@ public partial class RandomizerForm : Form
     private void ResetFormSize()
     {
         this.ClientSize = new System.Drawing.Size(618, 93);
+        GC.Collect();
     }
 
     private void TableConfigurer_Click(object sender, EventArgs e)
     {
-        if (AddTableSelector.Enabled == false)
-        {
-            StopTableConfigure();
-            return;
-        }
-        StartTableConfigure();
-
+        if (AddTableSelector.Enabled) StartTableConfigure();
+        else StopTableConfigure();
+        return;
     }
 
     private void StartTableConfigure()
@@ -156,40 +152,28 @@ public partial class RandomizerForm : Form
         TableConfigurerControl tableConfigurer = new(Tables);
         tableConfigurer.Location = new System.Drawing.Point(11, 75);
         tableConfigurer.Name = "TableConfig";
-        tableConfigurer.ControlRemoved += TableConfigurer_ControlRemoved;
         this.Controls.Add(tableConfigurer);
         EnableButtons(false);
     }
 
-    private void TableConfigurer_ControlRemoved(object sender, ControlEventArgs e)
-    {
-        SaveTables();
-    }
-
     private void StopTableConfigure()
     {
-
         if (!Controls.OfType<TableConfigurerControl>().Any()) return;
         foreach (TableConfigurerControl control in Controls.OfType<TableConfigurerControl>())
         {
             Controls.Remove(Controls.OfType<TableConfigurerControl>().First());
         }
         ResetFormSize();
+        Tables.OrderBy(x => x.Name);
+        SaveTables();
         EnableButtons(true);
     }
 
-    private void EnableButtons(bool Enabled)
+    private void EnableButtons(bool IsEnabled)
     {
-        this.AddTableSelector.Enabled = Enabled;
-        this.UseLoadOutButton.Enabled = Enabled;
-        this.SaveLoadoutButton.Enabled = Enabled;
-        this.RerollAllFields.Enabled = Enabled;
-    }
-
-
-    private void ConfigurerClose(object sender, FormClosedEventArgs e)
-    {
-        SaveTables();
-        this.AddTableSelector.Enabled = true;
+        this.AddTableSelector.Enabled = IsEnabled;
+        this.UseLoadOutButton.Enabled = IsEnabled;
+        this.SaveLoadoutButton.Enabled = IsEnabled;
+        this.RerollAllFields.Enabled = IsEnabled;
     }
 }
