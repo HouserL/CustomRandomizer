@@ -16,20 +16,26 @@ public partial class TableConfigurerControl : UserControl
         var table = new TableModel();
         table.Name = "New Table";
         _tables.Add(table);
+        AddTableItem(table);
         LoadList(table);
         UpdateDataSource();
         ResizeColumns();
     }
 
+    private void AddTableItem(TableModel table)
+    {
+        table.TableItems.Add(new());
+    }
+
     private void RemoveTable_Click(object sender, EventArgs e)
     {
-        _tables.Remove(_tables.FirstOrDefault(x => x.Name == ListBoxTables.Text));
+        _tables.Remove(GetCurrentTable());
         LoadList();
     }
     
     private void AddRow_Click(object sender, EventArgs e)
     {
-        _tables.FirstOrDefault(x => x.Name == ListBoxTables.Text).TableItems.Add(new TableItemModel());
+        AddTableItem(GetCurrentTable());
         UpdateDataSource();
         ResizeColumns();
     }
@@ -38,7 +44,7 @@ public partial class TableConfigurerControl : UserControl
     {
         if (_tables.FirstOrDefault(x => x.Name == ListBoxTables.Text).TableItems.Count == 0) return;
        
-        _tables.FirstOrDefault(x => x.Name == ListBoxTables.Text).TableItems.RemoveAt(TableItemsDataGridView.CurrentCell.RowIndex);
+        GetCurrentTable().TableItems.RemoveAt(TableItemsDataGridView.CurrentCell.RowIndex);
         UpdateDataSource();
         ResizeColumns();
     }
@@ -50,13 +56,18 @@ public partial class TableConfigurerControl : UserControl
         {
             for (int i = 0; i < Convert.ToInt16(TextBoxTestNumber.Text.ToString()); i++) //Run Table for x times based on text box.
             {
-                RichTextBoxResults.Text += RandomizerLogic.RunTable(_tables, _tables[ListBoxTables.SelectedIndex]) + " ";
+                RichTextBoxResults.Text += RandomizerLogic.RunTable(_tables, GetCurrentTable()) + " ";
             }
         }
         catch (Exception)
         {
             return;
         }
+    }
+
+    private TableModel GetCurrentTable()
+    {
+        return _tables.FirstOrDefault(x => x.Name == ListBoxTables.Text);
     }
 
     private void ListBoxTables_SelectedIndexChanged(object sender, EventArgs e)
@@ -68,6 +79,8 @@ public partial class TableConfigurerControl : UserControl
     private void EditName_CheckedChanged(object sender, EventArgs e)
     {
         TextBoxTableName.ReadOnly = !TextBoxTableName.ReadOnly;
+        GetCurrentTable().Name = TextBoxTableName.Text;
+        LoadList();
     }
 
     private void LoadList(TableModel table = null)
@@ -96,6 +109,6 @@ public partial class TableConfigurerControl : UserControl
     private void UpdateDataSource()
     {
         TableItemsDataGridView.DataSource = null;
-        TableItemsDataGridView.DataSource = _tables.FirstOrDefault(x => x.Name == ListBoxTables.Text).TableItems;
+        TableItemsDataGridView.DataSource = GetCurrentTable().TableItems;
     }
 }
