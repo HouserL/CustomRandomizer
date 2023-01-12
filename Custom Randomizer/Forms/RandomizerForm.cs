@@ -149,7 +149,7 @@ public partial class RandomizerForm : Form
     {
         RemoveAllSelecters();
 
-        TableConfigurerControl tableConfigurer = new(Tables);
+        TableConfigurerControl tableConfigurer = new(Tables, LoadOuts);
         tableConfigurer.Location = new System.Drawing.Point(11, 75);
         tableConfigurer.Name = "TableConfig";
         this.Controls.Add(tableConfigurer);

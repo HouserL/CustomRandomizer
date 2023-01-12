@@ -3,11 +3,13 @@
 public partial class TableConfigurerControl : UserControl
 {
     private List<TableModel> _tables = new();
+    private List<LoadOutModel> _loudOutModels = new();
 
-    public TableConfigurerControl(List<TableModel> tables)
+    public TableConfigurerControl(List<TableModel> tables, List<LoadOutModel> loadOuts)
     {
         InitializeComponent();
         _tables = tables;
+        _loudOutModels = loadOuts;
         LoadList();
     }
 
@@ -65,9 +67,10 @@ public partial class TableConfigurerControl : UserControl
         }
     }
 
-    private TableModel GetCurrentTable()
+    private TableModel GetCurrentTable(string tableName = null)
     {
-        return _tables.FirstOrDefault(x => x.Name == ListBoxTables.Text);
+        if (tableName == null) tableName = ListBoxTables.Text;
+        return _tables.FirstOrDefault(x => x.Name == tableName);
     }
 
     private void ListBoxTables_SelectedIndexChanged(object sender, EventArgs e)
@@ -78,9 +81,14 @@ public partial class TableConfigurerControl : UserControl
 
     private void EditName_CheckedChanged(object sender, EventArgs e)
     {
+        var oldname = GetCurrentTable().Name;
         TextBoxTableName.ReadOnly = !TextBoxTableName.ReadOnly;
+        if (TextBoxTableName.ReadOnly == false) return;
         GetCurrentTable().Name = TextBoxTableName.Text;
-        LoadList();
+        LoadList(GetCurrentTable());
+        //_loudOutModels.Where(x => x.Name == GetCurrentTable().Name).ToList().ForEach(y => y. //Tables.ForEach(x => x.Replace(oldname, TextBoxTableName.Text)));
+        _loudOutModels.ForEach(x => x.UpdateTableNames(oldname, TextBoxTableName.Text));
+        // Work on fixing this currently not updating names properly for _loudOutModels when going back to Table selector controls.
     }
 
     private void LoadList(TableModel table = null)
