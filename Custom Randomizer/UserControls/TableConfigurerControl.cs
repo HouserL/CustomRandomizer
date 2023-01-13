@@ -1,4 +1,7 @@
-﻿namespace CustomRandomizer.UserControls;
+﻿using System.Diagnostics;
+using System.Windows.Forms;
+
+namespace CustomRandomizer.UserControls;
 
 public partial class TableConfigurerControl : UserControl
 {
@@ -31,6 +34,13 @@ public partial class TableConfigurerControl : UserControl
 
     private void RemoveTable_Click(object sender, EventArgs e)
     {
+        var results = MessageBox.Show("This might some tables not work any more. Would you like to remove any tables linked to this one asa result?",
+                                                "Delete Table", MessageBoxButtons.YesNoCancel);
+        if (results == DialogResult.Cancel) return;
+        if(results == DialogResult.Yes) 
+        {
+            //do something
+        }
         _tables.Remove(GetCurrentTable());
         LoadList();
     }
@@ -82,13 +92,12 @@ public partial class TableConfigurerControl : UserControl
     private void EditName_CheckedChanged(object sender, EventArgs e)
     {
         var oldname = GetCurrentTable().Name;
+        var newname = TextBoxTableName.Text;
         TextBoxTableName.ReadOnly = !TextBoxTableName.ReadOnly;
         if (TextBoxTableName.ReadOnly == false) return;
         GetCurrentTable().Name = TextBoxTableName.Text;
         LoadList(GetCurrentTable());
-        //_loudOutModels.Where(x => x.Name == GetCurrentTable().Name).ToList().ForEach(y => y. //Tables.ForEach(x => x.Replace(oldname, TextBoxTableName.Text)));
-        _loudOutModels.ForEach(x => x.UpdateTableNames(oldname, TextBoxTableName.Text));
-        // Work on fixing this currently not updating names properly for _loudOutModels when going back to Table selector controls.
+        _loudOutModels.ForEach(x => x.UpdateTableNames(oldname, newname));
     }
 
     private void LoadList(TableModel table = null)

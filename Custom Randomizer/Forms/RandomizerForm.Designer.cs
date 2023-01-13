@@ -34,6 +34,7 @@
             this.SaveLoadoutButton = new System.Windows.Forms.Button();
             this.LoadoutComboBox = new System.Windows.Forms.ComboBox();
             this.UseLoadOutButton = new System.Windows.Forms.Button();
+            this.DeleteLoadoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddTableSelector
@@ -58,11 +59,11 @@
             // 
             // TableConfigurer
             // 
-            this.TableConfigurer.Location = new System.Drawing.Point(530, 12);
+            this.TableConfigurer.Location = new System.Drawing.Point(611, 12);
             this.TableConfigurer.Name = "TableConfigurer";
             this.TableConfigurer.Size = new System.Drawing.Size(75, 57);
             this.TableConfigurer.TabIndex = 3;
-            this.TableConfigurer.Text = "Table Configurer Button";
+            this.TableConfigurer.Text = "Table Configurer";
             this.TableConfigurer.UseVisualStyleBackColor = true;
             this.TableConfigurer.Click += new System.EventHandler(this.TableConfigurer_Click);
             // 
@@ -72,14 +73,14 @@
             this.SaveLoadoutButton.Name = "SaveLoadoutButton";
             this.SaveLoadoutButton.Size = new System.Drawing.Size(75, 57);
             this.SaveLoadoutButton.TabIndex = 4;
-            this.SaveLoadoutButton.Text = "Save Loadout Button";
+            this.SaveLoadoutButton.Text = "Save Loadout";
             this.SaveLoadoutButton.UseVisualStyleBackColor = true;
             this.SaveLoadoutButton.Click += new System.EventHandler(this.SaveLoadoutButton_Click);
             // 
             // LoadoutComboBox
             // 
             this.LoadoutComboBox.FormattingEnabled = true;
-            this.LoadoutComboBox.Location = new System.Drawing.Point(336, 12);
+            this.LoadoutComboBox.Location = new System.Drawing.Point(417, 12);
             this.LoadoutComboBox.Name = "LoadoutComboBox";
             this.LoadoutComboBox.Size = new System.Drawing.Size(188, 23);
             this.LoadoutComboBox.TabIndex = 5;
@@ -90,9 +91,19 @@
             this.UseLoadOutButton.Name = "UseLoadOutButton";
             this.UseLoadOutButton.Size = new System.Drawing.Size(75, 57);
             this.UseLoadOutButton.TabIndex = 6;
-            this.UseLoadOutButton.Text = "Use Loadout Button";
+            this.UseLoadOutButton.Text = "Use Loadout";
             this.UseLoadOutButton.UseVisualStyleBackColor = true;
             this.UseLoadOutButton.Click += new System.EventHandler(this.UseLoadOutButton_Click);
+            // 
+            // DeleteLoadoutButton
+            // 
+            this.DeleteLoadoutButton.Location = new System.Drawing.Point(336, 12);
+            this.DeleteLoadoutButton.Name = "DeleteLoadoutButton";
+            this.DeleteLoadoutButton.Size = new System.Drawing.Size(75, 57);
+            this.DeleteLoadoutButton.TabIndex = 7;
+            this.DeleteLoadoutButton.Text = "Delete Loadout";
+            this.DeleteLoadoutButton.UseVisualStyleBackColor = true;
+            this.DeleteLoadoutButton.Click += new System.EventHandler(this.DeleteLoadoutButton_Click);
             // 
             // RandomizerForm
             // 
@@ -100,7 +111,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(618, 93);
+            this.ClientSize = new System.Drawing.Size(697, 93);
+            this.Controls.Add(this.DeleteLoadoutButton);
             this.Controls.Add(this.UseLoadOutButton);
             this.Controls.Add(this.LoadoutComboBox);
             this.Controls.Add(this.SaveLoadoutButton);
@@ -121,5 +133,6 @@
         private Button SaveLoadoutButton;
         private ComboBox LoadoutComboBox;
         private Button UseLoadOutButton;
+        private Button DeleteLoadoutButton;
     }
 }

@@ -1,3 +1,4 @@
+using CustomRandomizer.WinFormImprovements;
 using System.Windows.Forms;
 
 namespace CustomRandomizer.Forms;
@@ -39,7 +40,14 @@ public partial class RandomizerForm : Form
     {
         LoadoutComboBox.Items.Clear();
         LoadoutComboBox.Items.AddRange(LoadOuts.Select(x => x.Name).ToArray());
-        LoadoutComboBox.SelectedIndex = 0;
+        try
+        {
+            LoadoutComboBox.SelectedIndex = 0;
+        }
+        catch (Exception)
+        {
+            //throw;
+        }
     }
 
     private void AddTableSelector_Click(object sender, EventArgs e)
@@ -101,19 +109,25 @@ public partial class RandomizerForm : Form
     {
         if (!Controls.OfType<TableSelecterControl>().Any()) return;
         LoadOutModel loadOutModel= new();
+        var value = string.Empty;
+        if (WinFormImprovments.InputBox("Save New Loud Out", "What would you like to name the loadout?", ref value) == DialogResult.Cancel) return;
+        loadOutModel.Name = value;
         foreach (TableSelecterControl selecter in Controls.OfType<TableSelecterControl>())
         {
             loadOutModel.Tables.Add(selecter.TableNamesComboBox.Text.ToString());
         }
         //change to C# from VB simple input box for name capture.
-        loadOutModel.Name = Microsoft.VisualBasic.Interaction.InputBox("What would you like to name the loadout?","Save New Loud Out");
-
         LoadOuts.Add(loadOutModel);
         SaveLoadOuts(); 
     }
 
     private void UseLoadOutButton_Click(object sender, EventArgs e)
     {
+        if (LoadoutComboBox.SelectedIndex == -1)
+        {
+            MessageBox.Show("You have no Load Outs please make one so you can use this function.");
+            return;
+        }
         RemoveAllSelecters();
         var loutOutModel = LoadOuts.FirstOrDefault(x => x.Name == LoadoutComboBox.Text.ToString());
         foreach (var TableName in loutOutModel.Tables)
@@ -166,6 +180,7 @@ public partial class RandomizerForm : Form
         ResetFormSize();
         Tables.OrderBy(x => x.Name);
         SaveTables();
+        SaveLoadOuts();
         EnableButtons(true);
     }
 
@@ -175,5 +190,14 @@ public partial class RandomizerForm : Form
         this.UseLoadOutButton.Enabled = IsEnabled;
         this.SaveLoadoutButton.Enabled = IsEnabled;
         this.RerollAllFields.Enabled = IsEnabled;
+    }
+
+    private void DeleteLoadoutButton_Click(object sender, EventArgs e)
+    {
+        var result = MessageBox.Show("Are you sure you want to delete this Load Out?", "Delete Load Out", MessageBoxButtons.OKCancel);
+        if (result == DialogResult.Cancel) return;
+        LoadOuts.Remove(LoadOuts.FirstOrDefault(x => x.Name == LoadoutComboBox.Text));
+        LoadLoadOutComboBox();
+        SaveLoadOuts();
     }
 }
