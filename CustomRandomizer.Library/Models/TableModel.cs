@@ -11,4 +11,14 @@ public class TableModel
             return this.TableItems.Select(x => x.Weight).ToList().Sum();
         }
     }
+    public void CheckTables(string name)
+    {
+        foreach (var item in TableItems)
+        {
+            if (item.Value == name)
+            {
+                item.IsTable = false;
+            }
+        }
+    }
 }

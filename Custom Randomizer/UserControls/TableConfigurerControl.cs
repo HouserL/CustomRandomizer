@@ -6,13 +6,13 @@ namespace CustomRandomizer.UserControls;
 public partial class TableConfigurerControl : UserControl
 {
     private List<TableModel> _tables = new();
-    private List<LoadOutModel> _loudOutModels = new();
+    private List<LoadOutModel> _loadOutModels = new();
 
     public TableConfigurerControl(List<TableModel> tables, List<LoadOutModel> loadOuts)
     {
         InitializeComponent();
         _tables = tables;
-        _loudOutModels = loadOuts;
+        _loadOutModels = loadOuts;
         LoadList();
     }
 
@@ -34,11 +34,13 @@ public partial class TableConfigurerControl : UserControl
 
     private void RemoveTable_Click(object sender, EventArgs e)
     {
-        var results = MessageBox.Show("This might some tables not work any more. Would you like to remove any tables linked to this one asa result?",
+        var results = MessageBox.Show("This might cause some tables to not work any more. Would you like to remove any tables linked to this one as a result?",
                                                 "Delete Table", MessageBoxButtons.YesNoCancel);
         if (results == DialogResult.Cancel) return;
         if(results == DialogResult.Yes) 
         {
+            _tables.ForEach(x => x.CheckTables(GetCurrentTable().Name));
+            _loadOutModels.ForEach(x => x.RemoveTable(GetCurrentTable().Name));
             //do something
         }
         _tables.Remove(GetCurrentTable());
@@ -97,7 +99,7 @@ public partial class TableConfigurerControl : UserControl
         if (TextBoxTableName.ReadOnly == false) return;
         GetCurrentTable().Name = TextBoxTableName.Text;
         LoadList(GetCurrentTable());
-        _loudOutModels.ForEach(x => x.UpdateTableNames(oldname, newname));
+        _loadOutModels.ForEach(x => x.UpdateTableNames(oldname, newname));
     }
 
     private void LoadList(TableModel table = null)
